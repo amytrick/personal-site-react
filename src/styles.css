@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(221, 216, 204);
   color: white;
   height: 100%;
   font-family: "Tenor Sans", sans-serif;
@@ -12,6 +12,10 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 8vw;
   line-height: 70%;
+}
+
+a {
+  color: white;
 }
 
 .nav-item:hover {
@@ -35,20 +39,26 @@ h1 {
   height: 100vh;
 }
 
-#colorblock {
-  background-color: rgb(190, 150, 169);
+#colorblock,
+#nav-column {
+  background-color: rgb(39, 40, 46);
   height: 100vh;
 }
 
 #colorblock-row {
-  background-color: orange;
   height: 100vh;
+  padding: 0;
 }
 
 #container {
   padding: 2em;
 }
 
-#side-nav {
-  align-self: baseline;
+#nav-column {
+  padding-right: 2em;
+}
+
+#body-column,
+#colorblock-column {
+  padding: 0;
 }

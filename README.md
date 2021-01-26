@@ -1,4 +1,2 @@
-# Personal website for Amy Trick
-
-Still under construction!
-
+# personal-site-react
+Created with CodeSandbox
