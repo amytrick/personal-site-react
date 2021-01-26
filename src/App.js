@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
 import About from "./about";
@@ -13,7 +14,7 @@ const Hello = () => {
   return (
     <Container id="container">
       <Row id="colorblock-row">
-        <Col>
+        <Col lg={6}>
           <div id="colorblock">
             <h1>
               <p>HE</p>
@@ -21,7 +22,11 @@ const Hello = () => {
             </h1>
           </div>
         </Col>
-        <Col></Col>
+        <Col lg={6}>
+          <div>
+            <h1>HI.</h1>
+          </div>
+        </Col>
       </Row>
     </Container>
   );
@@ -29,36 +34,51 @@ const Hello = () => {
 
 export default function App() {
   return (
-    <Router>
-      <nav>
-        {/* <ul> */}
-        <p>
-          <Link to="/about"> About </Link>
-        </p>
-        <p>
-          <Link to="/works"> Works </Link>
-        </p>
-        <p>
-          <Link to="/contact"> Contact </Link>
-        </p>
-        {/* </ul> */}
-      </nav>
-      <div>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/works">
-            <Works />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Hello />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <Container>
+      <Row>
+        <Col xs={1}>
+          <Router>
+            <nav>
+              <p>
+                <Link className="nav-item" to="/about">
+                  {" "}
+                  About{" "}
+                </Link>
+              </p>
+              <p>
+                <Link className="nav-item" to="/works">
+                  {" "}
+                  Works{" "}
+                </Link>
+              </p>
+              <p>
+                <Link className="nav-item" to="/contact">
+                  {" "}
+                  Contact{" "}
+                </Link>
+              </p>
+            </nav>
+            <div>
+              <Switch>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/works">
+                  <Works />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                <Route path="/">
+                  <Hello />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
+        </Col>
+        <Col xs={10}>{/* <Hello /> */}</Col>
+        <Col xs={1}>This column is 1</Col>
+      </Row>
+    </Container>
   );
 }

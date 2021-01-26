@@ -1,15 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
 
 body {
   background-color: rgb(0, 0, 0);
   color: white;
   height: 100%;
+  font-family: "Tenor Sans", sans-serif;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 8vw;
   line-height: 20%;
+}
+
+.nav-item:hover {
+  color: rgb(190, 150, 169);
+}
+
+.nav-item:active {
+  text-decoration: underline;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
 }
 
 #colorblock {
@@ -22,5 +37,5 @@ h1 {
 }
 
 #container {
-  background-color: yellow;
+  background-color: rgb(83, 135, 231);
 }
