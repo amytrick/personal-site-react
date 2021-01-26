@@ -12,17 +12,19 @@ import Col from "react-bootstrap/Col";
 
 const Hello = () => {
   return (
-    <Container id="container">
+    <Container fluid>
       <Row id="colorblock-row">
-        <Col lg={6}>
+        <Col>
           <div id="colorblock">
-            <h1>
-              <p>HE</p>
-              <p>LLO.</p>
-            </h1>
+            <div id="hello">
+              <h1>
+                <p>HE</p>
+                <p>LLO.</p>
+              </h1>
+            </div>
           </div>
         </Col>
-        <Col lg={6}>
+        <Col>
           <div>
             <h1>HI.</h1>
           </div>
@@ -34,30 +36,34 @@ const Hello = () => {
 
 export default function App() {
   return (
-    <Container>
-      <Row>
-        <Col xs={1}>
-          <Router>
-            <nav>
-              <p>
-                <Link className="nav-item" to="/about">
-                  {" "}
-                  About{" "}
-                </Link>
-              </p>
-              <p>
-                <Link className="nav-item" to="/works">
-                  {" "}
-                  Works{" "}
-                </Link>
-              </p>
-              <p>
-                <Link className="nav-item" to="/contact">
-                  {" "}
-                  Contact{" "}
-                </Link>
-              </p>
-            </nav>
+    <Container fluid id="container">
+      <Row id="homepage-row">
+        <Router>
+          <Col xs={1} className="d-flex align-items-center">
+            <div>
+              <nav>
+                <p>
+                  <Link className="nav-item" to="/about">
+                    {" "}
+                    About{" "}
+                  </Link>
+                </p>
+                <p>
+                  <Link className="nav-item" to="/works">
+                    {" "}
+                    Works{" "}
+                  </Link>
+                </p>
+                <p>
+                  <Link className="nav-item" to="/contact">
+                    {" "}
+                    Contact{" "}
+                  </Link>
+                </p>
+              </nav>
+            </div>
+          </Col>
+          <Col xs={10}>
             <div>
               <Switch>
                 <Route path="/about">
@@ -74,9 +80,8 @@ export default function App() {
                 </Route>
               </Switch>
             </div>
-          </Router>
-        </Col>
-        <Col xs={10}>{/* <Hello /> */}</Col>
+          </Col>
+        </Router>
         <Col xs={1}>This column is 1</Col>
       </Row>
     </Container>
