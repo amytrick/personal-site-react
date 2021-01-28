@@ -1,17 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
-import About from "./about";
-import Works from "./works";
-import Contact from "./contact";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { IconContext } from "react-icons";
+
+import About from "./about";
+import Works from "./works";
+import Contact from "./contact";
 
 const Hello = () => {
   return (
@@ -30,9 +30,7 @@ const Hello = () => {
             </div>
           </div>
         </Col>
-        <Col>{/* <div>
-            <h1>HI.</h1>
-          </div> */}</Col>
+        <Col></Col>
       </Row>
     </Container>
   );

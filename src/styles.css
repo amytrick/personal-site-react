@@ -18,6 +18,23 @@ a {
   color: white;
 }
 
+.title {
+  padding-bottom: 3em;
+  color: white;
+}
+
+.content {
+  padding: 3em;
+  color: rgb(39, 40, 46);
+}
+
+.body {
+  border: white solid 2px;
+  padding: 1em;
+  border-bottom: none;
+  border-right: none;
+}
+
 .nav-item:hover {
   color: rgb(190, 150, 169);
 }
@@ -29,6 +46,18 @@ a {
 .nav-item {
   color: white;
   text-decoration: none;
+}
+
+.project-card {
+  border: solid white 1px;
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+}
+
+.project-photos {
+  height: 100%;
+  width: 100%;
 }
 
 #hello {
@@ -55,7 +84,7 @@ a {
 }
 
 #nav-column {
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 
 #body-column,
