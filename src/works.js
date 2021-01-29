@@ -1,4 +1,4 @@
-import Ember from "/static/img/Ember.jpg";
+import Ember from "./assets/Ember.jpg";
 
 function Project({ title, description, photo }) {
   return (
