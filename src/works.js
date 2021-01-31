@@ -1,11 +1,16 @@
-import Ember from "./assets/Ember.jpg";
+import Ember from "./assets/Ember-square.png";
+import useState from "react";
 
 function Project({ title, description, photo }) {
+  // const [isShown, setIsShown] = useState(false);
+
   return (
     <div className="project-card">
       <img className="project-photos" src={photo} />
-      {/* <p>{title}</p>
-      <p>{description}</p> */}
+      <div id="project-overlay">
+        <p id="project-title">{title}</p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
@@ -19,11 +24,14 @@ export default function Works() {
           <p>RKS.</p>
         </h1>
       </div>
-      <Project
-        title={"Ember"}
-        description={"Photo management app"}
-        photo={Ember}
-      />
+
+      <div>
+        <Project
+          title={"EMBER"}
+          description={"photo management app"}
+          photo={Ember}
+        />
+      </div>
     </div>
   );
 }
