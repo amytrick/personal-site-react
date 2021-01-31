@@ -1,4 +1,5 @@
 import Ember from "./assets/Ember-square.png";
+import Hello from "./assets/personal-site-hello.png";
 import useState from "react";
 
 function Project({ title, description, photo }) {
@@ -24,13 +25,21 @@ export default function Works() {
           <p>RKS.</p>
         </h1>
       </div>
-
-      <div>
-        <Project
-          title={"EMBER"}
-          description={"photo management app"}
-          photo={Ember}
-        />
+      <div id="project-content" className="d-flex flex-row">
+        <div>
+          <Project
+            title={"EMBER"}
+            description={"photo management app"}
+            photo={Ember}
+          />
+        </div>
+        <div>
+          <Project
+            title={"WEBSITE"}
+            description={"this website"}
+            photo={Hello}
+          />
+        </div>
       </div>
     </div>
   );
