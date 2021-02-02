@@ -84,6 +84,11 @@ a {
   font-size: 2.5em;
 }
 
+#project-content button {
+  border: 0;
+  background: none;
+}
+
 #hello {
   align-self: right;
 }

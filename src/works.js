@@ -26,20 +26,24 @@ export default function Works() {
         </h1>
       </div>
       <div id="project-content" className="d-flex flex-row">
-        <div>
-          <Project
-            title={"EMBER"}
-            description={"photo management app"}
-            photo={Ember}
-          />
-        </div>
-        <div>
-          <Project
-            title={"WEBSITE"}
-            description={"this website"}
-            photo={Hello}
-          />
-        </div>
+        <button>
+          <div>
+            <Project
+              title={"EMBER"}
+              description={"photo management app"}
+              photo={Ember}
+            />
+          </div>
+        </button>
+        <button>
+          <div>
+            <Project
+              title={"WEBSITE"}
+              description={"this website"}
+              photo={Hello}
+            />
+          </div>
+        </button>
       </div>
     </div>
   );

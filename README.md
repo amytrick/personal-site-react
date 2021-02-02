@@ -1,2 +1,2 @@
-# personal-site-react
-Created with CodeSandbox
+# My personal website - built with React
+Coming soon!
