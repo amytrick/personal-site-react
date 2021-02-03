@@ -1,10 +1,9 @@
 import Ember from "./assets/Ember-square.png";
 import Hello from "./assets/personal-site-hello.png";
-import useState from "react";
+import { useState } from "react";
+import Modal from "react-modal";
 
 function Project({ title, description, photo }) {
-  // const [isShown, setIsShown] = useState(false);
-
   return (
     <div className="project-card">
       <img className="project-photos" src={photo} />
@@ -17,6 +16,11 @@ function Project({ title, description, photo }) {
 }
 
 export default function Works() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const handleClose = () => setModalIsOpen(false);
+  const handleShow = () => setModalIsOpen(true);
+
   return (
     <div className="content">
       <div className="title">
@@ -26,7 +30,7 @@ export default function Works() {
         </h1>
       </div>
       <div id="project-content" className="d-flex flex-row">
-        <button>
+        <button onClick={handleShow}>
           <div>
             <Project
               title={"EMBER"}
@@ -35,6 +39,7 @@ export default function Works() {
             />
           </div>
         </button>
+        <Modal isOpen={modalIsOpen} onHide={handleClose}></Modal>
         <button>
           <div>
             <Project
@@ -44,6 +49,10 @@ export default function Works() {
             />
           </div>
         </button>
+        <button onClick={handleShow}>Open modal</button>
+        <Modal isOpen={modalIsOpen}>
+          <p>Modal Content.</p>
+        </Modal>
       </div>
     </div>
   );
