@@ -2,6 +2,7 @@ import Ember from "./assets/Ember-square.png";
 import Hello from "./assets/personal-site-hello.png";
 import { useState } from "react";
 import Modal from "react-modal";
+import { FaBlackTie } from "react-icons/fa";
 
 function Project({ title, description, photo }) {
   return (
@@ -39,7 +40,11 @@ export default function Works() {
             />
           </div>
         </button>
-        <Modal isOpen={modalIsOpen} onHide={handleClose}></Modal>
+        <Modal
+          isOpen={modalIsOpen}
+          onHide={handleClose}
+          contentLabel={"project details"}
+        ></Modal>
         <button>
           <div>
             <Project
@@ -50,8 +55,18 @@ export default function Works() {
           </div>
         </button>
         <button onClick={handleShow}>Open modal</button>
-        <Modal isOpen={modalIsOpen}>
-          <p>Modal Content.</p>
+        <Modal
+          isOpen={modalIsOpen}
+          contentLabel="onRequestClose Example"
+          onRequestClose={handleClose}
+          style={{
+            content: {
+              color: "black"
+            }
+          }}
+        >
+          <p>Modal text!</p>
+          <button onClick={handleClose}>Close Modal</button>
         </Modal>
       </div>
     </div>
