@@ -9,7 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 function Project({ title, description, photo }) {
   return (
     <div className="project-card">
-      <img className="project-photos" src={photo} />
+      <img className="project-photos" src={photo} alt="individual project" />
       <div id="project-overlay">
         <p id="project-title">{title}</p>
         <p>{description}</p>
@@ -25,7 +25,7 @@ const useModal = () => {
 
   const RenderModal = (props) => (
     <React.Fragment>
-      <Modal isOpen={isVisible} onHide={hide}>
+      <Modal isOpen={isVisible} onHide={hide} shouldCloseOnOverlayClick={true}>
         {props.children}
       </Modal>
     </React.Fragment>
@@ -39,12 +39,16 @@ const useModal = () => {
 };
 
 export default function Works() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const handleClose = () => setModalIsOpen(false);
-  const handleShow = () => setModalIsOpen(true);
-  const { show: showEmberModal, RenderModal: RenderEmberModal } = useModal();
-  const { show: showB, RenderModal: RenderModalB } = useModal();
+  const {
+    show: showEmberModal,
+    hide: hideEmberModal,
+    RenderModal: RenderEmberModal
+  } = useModal();
+  const {
+    show: showB,
+    hide: hideModalB,
+    RenderModal: RenderModalB
+  } = useModal();
 
   return (
     <div className="content">
@@ -65,6 +69,10 @@ export default function Works() {
           </div>
         </button>
         <RenderEmberModal>
+          <button onClick={hideEmberModal} id="modal-close-button">
+            x
+          </button>
+
           <Carousel>
             <Carousel.Item>
               <img
@@ -86,7 +94,6 @@ export default function Works() {
                 src={EmberFullScreen}
                 alt="Second slide"
               />
-
               <Carousel.Caption>
                 <h3>Photo close up</h3>
                 <p>

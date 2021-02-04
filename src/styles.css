@@ -73,6 +73,22 @@ a {
   opacity: 0.5;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  top: 3em;
+}
+
+.carousel {
+  position: absolute;
+  top: 3em;
+  padding-right: 1em;
+  padding-top: 1em;
+}
+
+.ReactModal_Content ReactModal_Content--after-open {
+  inset: 120px;
+}
+
 #project-overlay {
   position: absolute;
   top: 40%;
@@ -119,4 +135,15 @@ a {
 #body-column,
 #colorblock-column {
   padding: 0;
+}
+
+#modal-close-button {
+  border: none;
+  background: none;
+  float: right;
+  padding-bottom: 1em;
+}
+
+#modal-close-button:hover {
+  color: grey;
 }
