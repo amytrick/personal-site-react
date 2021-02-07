@@ -41,8 +41,11 @@ export default function App() {
     <Container fluid id="container">
       <Row id="homepage-row">
         <Router>
-          <Col xs={1} id="nav-column" className="d-flex align-items-center">
-            <div>
+          <Col
+            id="nav-column"
+            className="d-flex align-items-center col-xl-3 col-sm-2"
+          >
+            <div id="nav-links">
               <nav>
                 <p>
                   <Link className="nav-item" to="/about">
@@ -65,7 +68,7 @@ export default function App() {
               </nav>
             </div>
           </Col>
-          <Col xs={10} id="body-column">
+          <Col id="body-column col-sm-9">
             <div>
               <Switch>
                 <Route path="/about">
@@ -84,16 +87,21 @@ export default function App() {
             </div>
           </Col>
         </Router>
-        <Col xs={1} className="d-flex align-items-center">
+        <Col id="logo-column" className="d-flex align-items-center col-sm-1">
           <IconContext.Provider value={{ size: "2em" }}>
             <div className="d-flex flex-column">
               <p>
-                <a href="https://github.com/amytrick/" target="_blank">
+                <a
+                  className="logo-icon"
+                  href="https://github.com/amytrick/"
+                  target="_blank"
+                >
                   <FaGithub />
                 </a>
               </p>
               <p>
                 <a
+                  className="logo-icon"
                   href="https://www.linkedin.com/in/amy-trick/"
                   target="_blank"
                 >

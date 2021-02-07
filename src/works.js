@@ -5,6 +5,9 @@ import Hello from "./assets/personal-site-hello.png";
 import React, { useState } from "react";
 import Modal from "react-modal";
 import Carousel from "react-bootstrap/Carousel";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 function Project({ title, description, photo }) {
   return (
@@ -25,7 +28,12 @@ const useModal = () => {
 
   const RenderModal = (props) => (
     <React.Fragment>
-      <Modal isOpen={isVisible} onHide={hide} shouldCloseOnOverlayClick={true}>
+      <Modal
+        isOpen={isVisible}
+        onHide={hide}
+        onRequestClose={hide}
+        className="ProjectModal"
+      >
         {props.children}
       </Modal>
     </React.Fragment>
@@ -51,15 +59,15 @@ export default function Works() {
   } = useModal();
 
   return (
-    <div className="content">
-      <div className="title">
+    <Container className="content">
+      <Row className="title">
         <h1>
           <p>WO</p>
           <p>RKS.</p>
         </h1>
-      </div>
-      <div id="project-content" className="d-flex flex-row">
-        <button onClick={showEmberModal}>
+      </Row>
+      <Row id="project-content" className="d-flex flex-row">
+        <button onClick={showEmberModal} className="col-sm-6">
           <div>
             <Project
               title={"EMBER"}
@@ -104,7 +112,7 @@ export default function Works() {
             </Carousel.Item>
           </Carousel>
         </RenderEmberModal>
-        <button>
+        <button className="col-sm-6">
           <div>
             <Project
               title={"WEBSITE"}
@@ -117,7 +125,7 @@ export default function Works() {
         <RenderModalB>
           <p>Modal2</p>
         </RenderModalB>
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 }

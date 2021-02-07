@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 8vw;
+  font-size: 10vmax;
   line-height: 70%;
 }
 
@@ -36,7 +36,7 @@ a {
 }
 
 .nav-item:hover {
-  color: rgb(190, 150, 169);
+  color: rgb(221, 216, 204);
 }
 
 .nav-item:active {
@@ -46,6 +46,11 @@ a {
 .nav-item {
   color: white;
   text-decoration: none;
+  font-size: 2vmax;
+}
+
+.logo-icon:hover {
+  color: rgb(39, 40, 46);
 }
 
 .project-card {
@@ -85,8 +90,12 @@ a {
   padding-top: 1em;
 }
 
-.ReactModal_Content ReactModal_Content--after-open {
-  inset: 120px;
+.ProjectModal {
+  inset: 320px;
+}
+
+#nav-links {
+  padding: 2em;
 }
 
 #project-overlay {
@@ -133,7 +142,8 @@ a {
 }
 
 #body-column,
-#colorblock-column {
+#colorblock-column,
+.col {
   padding: 0;
 }
 
