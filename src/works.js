@@ -2,8 +2,10 @@ import EmberSquare from "./assets/Ember-square.png";
 import EmberFullScreen from "./assets/Ember-full-screen.png";
 import EmberLibrary from "./assets/Ember-library.png";
 import Hello from "./assets/personal-site-hello.png";
-import React, { useState } from "react";
-import Modal from "react-modal";
+
+import useModal from "./components/useModal.js";
+
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -20,31 +22,6 @@ function Project({ title, description, photo }) {
     </div>
   );
 }
-
-const useModal = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const show = () => setIsVisible(true);
-  const hide = () => setIsVisible(false);
-
-  const RenderModal = (props) => (
-    <React.Fragment>
-      <Modal
-        isOpen={isVisible}
-        onHide={hide}
-        onRequestClose={hide}
-        className="ProjectModal"
-      >
-        {props.children}
-      </Modal>
-    </React.Fragment>
-  );
-
-  return {
-    show,
-    hide,
-    RenderModal
-  };
-};
 
 export default function Works() {
   const {
@@ -67,7 +44,7 @@ export default function Works() {
         </h1>
       </Row>
       <Row id="project-content" className="d-flex flex-row">
-        <button onClick={showEmberModal} className="col-sm-6">
+        <button onClick={showEmberModal} className="col-md-6">
           <div>
             <Project
               title={"EMBER"}
@@ -112,7 +89,7 @@ export default function Works() {
             </Carousel.Item>
           </Carousel>
         </RenderEmberModal>
-        <button className="col-sm-6">
+        <button className="col-md-6">
           <div>
             <Project
               title={"WEBSITE"}

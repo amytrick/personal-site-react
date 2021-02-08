@@ -2,9 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { IconContext } from "react-icons";
@@ -43,7 +43,7 @@ export default function App() {
         <Router>
           <Col
             id="nav-column"
-            className="d-flex align-items-center col-xl-3 col-sm-2"
+            className="d-flex align-items-center col-md-2 col-sm-3"
           >
             <div id="nav-links">
               <nav>

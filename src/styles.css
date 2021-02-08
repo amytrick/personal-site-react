@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
 
+/* ------------- SITE-WIDE --------------- */
+
 body {
   background-color: rgb(221, 216, 204);
   color: white;
@@ -18,6 +20,21 @@ a {
   color: white;
 }
 
+.logo-icon:hover {
+  color: rgb(39, 40, 46);
+}
+
+.nav-item:hover {
+  color: rgb(221, 216, 204);
+  text-decoration: underline;
+}
+
+.nav-item {
+  color: rgb(221, 216, 204);
+  text-decoration: none;
+  font-size: 2vmax;
+}
+
 .title {
   padding-bottom: 3em;
   color: white;
@@ -28,35 +45,36 @@ a {
   color: rgb(39, 40, 46);
 }
 
-.body {
-  border: white solid 2px;
-  padding: 1em;
-  border-bottom: none;
-  border-right: none;
+#nav-links {
+  padding: 2em;
 }
 
-.nav-item:hover {
-  color: rgb(221, 216, 204);
+#container {
+  padding: 2em;
 }
 
-.nav-item:active {
-  text-decoration: underline;
+#nav-column {
+  /* padding-right: 2em; */
 }
 
-.nav-item {
-  color: white;
-  text-decoration: none;
-  font-size: 2vmax;
+#body-column,
+#colorblock-column,
+.col {
+  padding: 0;
 }
 
-.logo-icon:hover {
-  color: rgb(39, 40, 46);
+/* ------------- HELLO --------------- */
+
+#hello {
+  align-self: right;
 }
+
+/* ------------- WORKS --------------- */
 
 .project-card {
   border: solid white 1px;
-  width: 20vw;
-  height: 20vw;
+  width: 20vmax;
+  height: 20vmax;
   position: relative;
 }
 
@@ -94,10 +112,6 @@ a {
   inset: 320px;
 }
 
-#nav-links {
-  padding: 2em;
-}
-
 #project-overlay {
   position: absolute;
   top: 40%;
@@ -112,10 +126,6 @@ a {
 #project-content button {
   border: 0;
   background: none;
-}
-
-#hello {
-  align-self: right;
 }
 
 #homepage-row {
@@ -133,20 +143,6 @@ a {
   padding: 0;
 }
 
-#container {
-  padding: 2em;
-}
-
-#nav-column {
-  /* padding-right: 2em; */
-}
-
-#body-column,
-#colorblock-column,
-.col {
-  padding: 0;
-}
-
 #modal-close-button {
   border: none;
   background: none;
@@ -156,4 +152,32 @@ a {
 
 #modal-close-button:hover {
   color: grey;
+}
+
+/* ------------- ABOUT --------------- */
+
+#about-content {
+  text-align: center;
+}
+
+#about-text {
+  padding-top: 3em;
+  color: rgb(39, 40, 46);
+}
+
+#about-text p {
+  font-size: 3vh;
+}
+
+#about-text h2 {
+  font-size: 4vh;
+}
+
+/* ------------- CONTACT --------------- */
+
+#contact-text {
+  border: white solid 2px;
+  padding: 1em;
+  border-bottom: none;
+  border-right: none;
 }

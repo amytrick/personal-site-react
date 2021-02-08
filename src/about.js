@@ -1,13 +1,26 @@
+import Amy from "./assets/Amy.jpg";
+
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+
 export default function About() {
   return (
-    <div className="content">
-      <div className="title">
+    <Container className="content">
+      <Row className="title">
         <h1>
           <p>AB</p>
           <p>OUT.</p>
         </h1>
-      </div>
-      <p>Amy Trick</p>
-    </div>
+      </Row>
+      <Row className="d-flex flex-column" id="about-content">
+        <div>
+          <img src={Amy} alt="Amy Trick" />
+        </div>
+        <div id="about-text">
+          <h2>AMY TRICK</h2>
+          <p>This is me.</p>
+        </div>
+      </Row>
+    </Container>
   );
 }
